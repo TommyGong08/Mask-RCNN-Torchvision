@@ -1,8 +1,8 @@
 Using Torchvision for Train Instance Segmentation
 --
 
-## Env Configuration(win 10)
-### Setup Conda Env
+### Env Configuration(win 10)
+#### Setup Conda Env
 ```
 conda create --name maskrcnn
 conda activate maskrcnn
@@ -17,7 +17,7 @@ conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
 ```
-### Install pytorch & cuda
+#### Install pytorch & cuda
 ```
 conda install pytorch torchvision cudatoolkit=10.0
 ```
@@ -28,7 +28,7 @@ https://pypi.tuna.tsinghua.edu.cn/simple/pycocotools-windows/
 pip install /path/to/pycocotools_windows_xxxx.whl
 ```
 
-## DIY Dateset Processing
+### DIY Dateset Processing
 convert your own dateset from labelme format to PennFudanPed format
 you can reference to this video:
 https://www.bilibili.com/video/BV1R7411F7QP
@@ -38,34 +38,36 @@ https://www.bilibili.com/video/BV1R7411F7QP
 python new_json_to_dataset.py path/to/original/dataset
 ```
 
-2. extract png and gth  
+2. Extract png and gth  
 put copy.py together with *.jpg and json, then run
 ```
 python copy.py
 ```
 
-3. copy your pngs and masks into PennFudanPed2/PNGImages ans PennFudanPed2/PedMasks manually
+3. Copy your pngs and masks into PennFudanPed2/PNGImages ans PennFudanPed2/PedMasks manually
 
 
-## Getting started
-before training, edit the parameters on *line 141, 184, 185* in train.py to your needs. 
+### Getting started
+1. before training, edit the parameters on *line 141, 184, 185* in train.py to your needs. 
 * names = {'0': 'background', '1': 'train'}
 * num_classes = 2  
 * train_num = 1200  
 
-### start training
+2. Start training
 ```
 python train.py
 ```
 
-## Predict
+### Predict
 before predicting, editing the same params as training.
 ```
 python predict.py
 ```
 
-## Result
-
+### Result
+![result1](./Maskrcnn/result_img/result2.png)
+![result2](./Maskrcnn/result_img/result3.png)
+![result3](./Maskrcnn/result_img/result4.png)
 
 
 
