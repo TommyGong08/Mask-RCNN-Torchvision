@@ -68,6 +68,7 @@ python predict.py
 ![result1](./Maskrcnn/result_img/result2.png)
 ![result2](./Maskrcnn/result_img/result3.png)
 ![result3](./Maskrcnn/result_img/result4.png)
+![result6](./Maskrcnn/result_img/result6.png)
 
 
 
